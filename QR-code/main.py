@@ -21,7 +21,7 @@ def color_new_year():
             qrcode.save("basic_qrcode.png", scale=15, border=2, dark="black", )
             return qrcode
         else:
-            print('Выберите цвет из предоженных')
+            print('Выберите цвет из предложенных')
 
 def color_halloween():
     """Функция предлагает выбрать цвет для QR-кода под тематику Хэллоуин"""
@@ -41,7 +41,7 @@ def color_halloween():
             qrcode.save("basic_qrcode.png", scale=38, border=2, dark="black", )
             return qrcode
         else:
-            print('Выберите цвет из предоженных')
+            print('Выберите цвет из предложенных')
 
 def color_march():
     """Функция предлагает выбрать цвет для QR-кода под тематику 8 марта"""
@@ -63,9 +63,10 @@ def color_march():
         if your_color == 'чёрный':
             qrcode.save("basic_qrcode.png", scale=12, border=2, dark="black", )
             return qrcode
-
+        else:
+            print('Выберите цвет из предложенных')
 def favorite_holiday():
-    """Выводит тот праздник, который больше всего нравится или необходим пользователю"""
+    """Выводит тот праздник, который больше всего нравится пользователю"""
     holidays = ['Новый год', 'Хэллоуин', '8 марта']
     while True:
         holiday = input("Какой праздник вам больше нравится/необходим для создания QR-кода (Новый год, Хэллоуин, 8 марта)? ").strip()
